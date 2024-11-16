@@ -1,0 +1,47 @@
+<div class="schedule-container">
+    <div class="schedule-header">
+      <h2>Horarios Disponibles</h2>
+      <div class="date-navigation">
+        <button class="nav-btn" (click)="previousWeek()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="current-week">
+          {{ currentWeekStart | date:'d MMM' }} - {{ currentWeekEnd | date:'d MMM, yyyy' }}
+        </div>
+        <button class="nav-btn" (click)="nextWeek()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  
+    <div class="doctors-list">
+      <div class="doctor-schedule" *ngFor="let doctor of doctors">
+        <div class="doctor-info">
+          <img [src]="doctor.photoUrl" alt="Doctor photo" class="doctor-photo">
+          <div class="doctor-details">
+            <h3>Dr. {{ doctor.name }}</h3>
+            <p>{{ doctor.specialty }}</p>
+          </div>
+        </div>
+  
+        <div class="time-slots">
+          <div class="day-column" *ngFor="let day of weekDays">
+            <div class="day-header">
+              <span class="day-name">{{ day | date:'EEE' }}</span>
+              <span class="day-date">{{ day | date:'d' }}</span>
+            </div>
+            <div class="slots">
+              <button 
+                *ngFor="let slot of getAvailableSlots(doctor.id, day)"
+                class="time-slot"
+                [class.available]="slot.available"
+                [disabled]="!slot.available"
+                (click)="selectTimeSlot(doctor, day, slot)">
+                {{ slot.time }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

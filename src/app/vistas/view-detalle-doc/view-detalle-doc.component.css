@@ -1,0 +1,81 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Estilo para el contenedor principal */
+  .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para la tarjeta */
+  .bg-white {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Título */
+  .text-blue-700 {
+    color: #2c3e50;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Texto */
+  .text-lg {
+    font-size: 1.125rem;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Imagen */
+  img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Botón */
+  button {
+    padding: 0.75rem 2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Mensaje de error */
+  .text-red-500 {
+    color: #e74c3c;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  

@@ -1,0 +1,20 @@
+<div class="container mx-auto p-6">
+    <div class="bg-white shadow-md rounded-lg p-8">
+      <h1 class="text-2xl font-bold mb-4 text-blue-700">Detalle del Doctor</h1>
+      <div *ngIf="doctor">
+        <p class="text-lg"><strong>ID:</strong> {{ doctor.id }}</p>
+        <p class="text-lg"><strong>Nombre:</strong> {{ doctor.nombre }}</p>
+        <p class="text-lg"><strong>Especialidad:</strong> {{ doctor.especialidad }}</p>
+        <img [src]="doctor.imgUrl" alt="{{ doctor.nombre }}" class="rounded-lg shadow-md w-48 h-auto mx-auto">
+      </div>
+      <div *ngIf="!doctor">
+        <p class="text-red-500">No se encontró información para este doctor.</p>
+      </div>
+      <button 
+        class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        [routerLink]="['/doctors']">
+        Volver a la lista de doctores
+      </button>
+    </div>
+  </div>
+  

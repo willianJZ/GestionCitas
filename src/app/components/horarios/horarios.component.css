@@ -1,0 +1,151 @@
+.schedule-container {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  
+    h2 {
+      color: #2c3e50;
+      margin: 0;
+    }
+  }
+  
+  .date-navigation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  
+    .nav-btn {
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: #3498db;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  
+    .current-week {
+      font-weight: 500;
+      color: #2c3e50;
+    }
+  }
+  
+  .doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .doctor-schedule {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .doctor-info {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+  
+    .doctor-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 16px;
+    }
+  
+    .doctor-details {
+      h3 {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 1.1rem;
+      }
+  
+      p {
+        margin: 4px 0 0;
+        color: #666;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  .time-slots {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .day-column {
+    min-width: 120px;
+    padding: 16px;
+    border-right: 1px solid #e0e0e0;
+  
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  .day-header {
+    text-align: center;
+    margin-bottom: 12px;
+  
+    .day-name {
+      display: block;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  
+    .day-date {
+      display: block;
+      color: #2c3e50;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+  }
+  
+  .slots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .time-slot {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  
+    &.available {
+      border-color: #3498db;
+      color: #3498db;
+  
+      &:hover {
+        background-color: #3498db;
+        color: white;
+      }
+    }
+  
+    &:disabled {
+      background-color: #f5f5f5;
+      color: #999;
+      cursor: not-allowed;
+      border-color: #e0e0e0;
+    }
+  }

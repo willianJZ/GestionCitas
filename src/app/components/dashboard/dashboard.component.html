@@ -1,0 +1,43 @@
+<div class="home-wrapper">
+    <div class="home-container">
+      <!-- Header Section with Particles -->
+      <header class="header">
+        <h1 class="title">
+          <span class="title-line">Bienvenido a nuestro</span>
+          <span class="title-highlight">Sistema de Gestión de Citas</span>
+        </h1>
+      </header>
+  
+      <!-- Interactive Sections -->
+      <div class="sections-container">
+        <!-- Quienes Somos Section -->
+        <div class="section-card" [class.active]="quienesSomosOpen">
+          <div class="section-header" (click)="toggleSection('quienesSomos')">
+            <h2>¿Quiénes Somos?</h2>
+            <div class="icon-wrapper">
+              <i class="fas fa-plus" [class.rotate]="quienesSomosOpen"></i>
+            </div>
+          </div>
+          <div class="section-content" [@expandCollapse]="quienesSomosOpen ? 'expanded' : 'collapsed'">
+            <div class="content-grid">
+              <div class="text-side">
+                <p class="highlight-text">Innovación y Eficiencia en la Gestión de Citas Medicas</p>
+                <p>Somos un equipo apasionado por transformar la manera en que las personas y personal medico gestionan sus citas. 
+                   Nuestra plataforma combina la simplicidad con la potencia para ofrecer la mejor experiencia en gestión de citas.</p>
+                <ul class="feature-list">
+                  <li><i class="fas fa-check"></i> Experiencia en el sector</li>
+                  <li><i class="fas fa-check"></i> Enfoque en la satisfacción del usuario</li>
+                  <li><i class="fas fa-check"></i> Enfoque en la gestion organizada de citas</li>
+                </ul>
+              </div>
+              <div class="image-side">
+                <div class="image-card">
+                  <i class="fas fa-users team-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

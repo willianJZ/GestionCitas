@@ -1,0 +1,113 @@
+.container{
+  width: 70vw; 
+  position: fixed;   /* O usa "absolute" si es dentro de un contenedor padre posicionado */
+  right: 0;          /* Alinea el contenedor al borde derecho */
+  top: 0;            /* Opcional: alinea al borde superior */
+  height: 40%;     /* Altura completa de la pantalla */     /* Ancho fijo del contenedor */
+  background-color: #f0f0f0;
+}
+
+.border-2 {
+  border-width: 1px;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.hover\:border-blue-400:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+
+.hover\:bg-blue-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.confirm-button {
+  background-color: #3b82f6; /* Azul inicial */
+  color: white;
+  font-weight: 500;
+  padding: 14px 20px; /* Botón más grande */
+  border-radius: 8px;
+  border: 1px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color  0.4s ease-in-out, transform 0.3s ease-in-out; /* Transición para suavizar el cambio de color y el tamaño */
+}
+
+/* Estilos para el botón con animación */
+button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px; /* Redondear las esquinas */
+  transition: all 0.3s ease; /* Suaviza la transición */
+  cursor: pointer;
+}
+
+/* Efecto de sombra azul al pasar el puntero */
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Sombra azul */
+  background-color: rgba(0, 123, 255, 0.1); /* Fondo azul claro al pasar el puntero */
+}
+
+/* Estilo cuando el botón está activo */
+button:active {
+  background-color: #007bff; /* Fondo azul al hacer clic */
+  color: #fff; /* Color del texto blanco */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Sombra azul al hacer clic */
+  font-weight: bold; /* Hacer el texto en negrita */
+}
+
+button svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease; /* Transición suave para el icono */
+}
+
+/* Cambiar el color del icono cuando el puntero está sobre el botón */
+button:hover svg, button:active svg {
+  color: #007bff; /* Cambiar color del icono a azul */
+}
+
+
+
+

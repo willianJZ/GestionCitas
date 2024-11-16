@@ -1,0 +1,23 @@
+<div class="bg-white shadow-md rounded-md p-6 w-full">
+  <h2 class="text-2xl font-bold mb-4">Select a Doctor</h2>
+  <ul class="space-y-4">
+    <li *ngFor="let doctor of doctors"
+        [class]="selectedDoctor === doctor ? 'border-blue-500 bg-blue-100 text-blue-700' : 'border-gray-300 hover:bg-blue-100 hover:border-blue-400'"
+        class="border-2 p-4 rounded-md cursor-pointer transition-colors"
+        (click)="handleDoctorSelection(doctor)">
+      <h3 class="text-lg font-medium">{{ doctor.nombre }}</h3>
+      <p class="text-gray-600">{{ doctor.especialidad }}</p>
+        <button 
+          class="btn-doctor" 
+          [routerLink]="['/detalle-doc', doctor.id]">
+          Información completa
+        </button>
+    </li>
+  </ul>
+  <div class="flex justify-end mt-4">
+    <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md" onclick="location.href='/horarios'"
+            (click)="handleConfirmSelection()">
+            <b>CONFIRMAR</b>
+    </button>
+  </div>
+</div>

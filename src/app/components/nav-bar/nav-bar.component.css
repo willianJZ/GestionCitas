@@ -1,0 +1,176 @@
+/* navbar.component.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #15202b;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-text {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-button svg {
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover svg {
+    transform: translateX(2px);
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #38b2ac;
+    border: 1px solid #38b2ac;
+}
+
+.login-btn:hover {
+    background-color: rgba(56, 178, 172, 0.1);
+}
+
+.register-btn {
+    background-color: #38b2ac;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #319795;
+    transform: translateY(-1px);
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .welcome-text {
+        font-size: 0.875rem;
+    }
+
+    .nav-button {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .nav-button span {
+        display: none; /* Oculta el texto en móviles */
+    }
+
+    .nav-button svg {
+        margin: 0; /* Centra los iconos cuando no hay texto */
+    }
+
+    .navbar-right {
+        gap: 0.5rem;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .welcome-text {
+        display: none; /* Oculta el mensaje de bienvenida en pantallas muy pequeñas */
+    }
+}
+
+/* Animación para cuando el navbar aparece */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation: slideDown 0.3s ease-out;
+}
+
+.login-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Estilos para los botones en el navbar */
+/* Estilos para los botones en el navbar */
+.nav-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px; /* Redondea las esquinas de los botones */
+    transition: all 0.3s ease; /* Animación suave */
+    color: #4b5563; /* Color inicial del texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+  }
+  
+  /* Efecto de sombra azul y cambio de fondo al pasar el puntero */
+  .nav-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Sombra azul */
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo azul claro al pasar el puntero */
+  }
+  
+  /* Estilo para el icono */
+  .nav-button svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    transition: all 0.3s ease; /* Animación suave para el icono */
+  }
+  
+  /* Cambia el color del icono cuando se pasa el puntero o se selecciona */
+  .nav-button:hover svg {
+    color: #007bff; /* Color azul para el icono */
+  }
+  
+  /* Estilo para la opción activa */
+  .nav-button.active {
+    color: #007bff; /* Color azul para la opción activa */
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo azul claro */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Sombra azul */
+    font-weight: bold; /* Negrita para la opción activa */
+  }
+  
+  /* Estilo para las opciones inactivas */
+  .nav-button.inactive {
+    color: #4b5563; /* Color gris para las opciones inactivas */
+    background-color: transparent; /* Fondo transparente */
+  }
+  

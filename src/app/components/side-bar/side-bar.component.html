@@ -1,0 +1,36 @@
+<div class="container bg-blue-50">
+  <div class="sidebar w-64 px-6 py-8 shadow-lg">
+    <ul class="space-y-6">
+      <!-- Botón DOCTORES -->
+      <li
+        class="inactive-option cursor-pointer flex items-center transition-colors hover:text-blue-700" 
+        [routerLink]="['/doctors']">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        <span>DOCTORES</span>
+      </li>
+
+      <!-- Botón CITAS -->
+      <li 
+        class="inactive-option cursor-pointer flex items-center transition-colors hover:text-blue-700" 
+        [routerLink]="['/citas']">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <span>CITAS</span>
+      </li>
+
+      <!-- Botón HORARIOS -->
+      <li 
+        class="inactive-option cursor-pointer flex items-center transition-colors hover:text-blue-700" 
+        [routerLink]="['/horarios']">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <span>HORARIOS</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
